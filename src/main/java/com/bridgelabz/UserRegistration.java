@@ -67,4 +67,19 @@ public class UserRegistration {
             System.out.println("Enter Mobile Number is invalid");
         }
     }
+
+    public static void validPasswordRule1() {
+        System.out.println("Enter the Password Rule 1: ");
+        String name = sc.next();
+        String regex = "^[A-Za-z0-9@._-]{8,}$";
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(name);
+        boolean result = matcher.matches();
+
+        if (result) {
+            System.out.println("Enter Password 1 is valid");
+        } else {
+            System.out.println("Password must have 8 character");
+        }
+    }
 }
