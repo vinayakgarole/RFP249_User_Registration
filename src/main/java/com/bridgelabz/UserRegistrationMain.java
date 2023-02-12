@@ -7,7 +7,7 @@ public class UserRegistrationMain {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the options: \n1. Validate first name. \n2. Validate last name. \n3. Valid Email ID.");
+        System.out.println("Enter the options: \n1. Validate first name. \n2. Validate last name. \n3. Valid Email ID. \n4. Validate Mobile Number.");
 
         switch (sc.nextInt()) {
             case 1:
@@ -18,6 +18,9 @@ public class UserRegistrationMain {
                 break;
             case 3:
                 UserRegistration.validEmail();
+                break;
+            case 4:
+                UserRegistration.validMobileNumber();
                 break;
         }
     }

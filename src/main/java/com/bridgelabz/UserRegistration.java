@@ -52,4 +52,19 @@ public class UserRegistration {
             System.out.println("Enter Email ID is invalid");
         }
     }
+
+    public static void validMobileNumber() {
+        System.out.println("Enter the Mobile Number: ");
+        String name = sc.next();
+        String regex = "^[\\d]{2}\\s[\\d]{10}$";
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(name);
+        boolean result = matcher.matches();
+
+        if (result) {
+            System.out.println("Enter Mobile Number is valid");
+        } else {
+            System.out.println("Enter Mobile Number is invalid");
+        }
+    }
 }
