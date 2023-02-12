@@ -37,4 +37,19 @@ public class UserRegistration {
             System.out.println("Enter name is invalid");
         }
     }
+
+    public static void validEmail() {
+        System.out.println("Enter the Email ID: ");
+        String name = sc.next();
+        String regex = "^[a-zA-Z0-9_1-1.]+[@][a-z]+[1.][a-z]{2,3}";
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(name);
+        boolean result = matcher.matches();
+
+        if (result) {
+            System.out.println("Enter Email ID is valid");
+        } else {
+            System.out.println("Enter Email ID is invalid");
+        }
+    }
 }
