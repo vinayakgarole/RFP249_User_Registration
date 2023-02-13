@@ -82,4 +82,19 @@ public class UserRegistration {
             System.out.println("Password must have 8 character");
         }
     }
+
+    public static void validPasswordRule2() {
+        System.out.println("Enter the Password Rule 2: ");
+        String name = sc.next();
+        String regex = "^[A-Z]{1}[A-Za-z0-9@._-]{7,}$";
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(name);
+        boolean result = matcher.matches();
+
+        if (result) {
+            System.out.println("Enter Password 2 is valid");
+        } else {
+            System.out.println("Password must have atleast one uppercase letter");
+        }
+    }
 }
