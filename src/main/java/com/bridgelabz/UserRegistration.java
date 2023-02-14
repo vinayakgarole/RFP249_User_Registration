@@ -112,4 +112,19 @@ public class UserRegistration {
             System.out.println("Password must have atleast one numeric number");
         }
     }
+
+    public static void validPasswordRule4() {
+        System.out.println("Enter the Password Rule 4: ");
+        String name = sc.next();
+        String regex = "^(?=.*[A-z])(?=.*[0-9])(?=.*[@#$%^&*()-+=])([a-zA-Z0-9@._-]).{8,}$";
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(name);
+        boolean result = matcher.matches();
+
+        if (result) {
+            System.out.println("Enter Password 4 is valid");
+        } else {
+            System.out.println("Password must has exactly one special character");
+        }
+    }
 }
